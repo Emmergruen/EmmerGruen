@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmergrün e.V. – Waldgarten Emmerich</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        nav {
+            background: #e0f2e9;
+            padding: 0.5em 0;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2em;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            cursor: pointer;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+            margin-top: 1em;
+        }
+        .card {
+            background: #f5fdf8;
+            border: 1px solid #b2d8c5;
+            border-radius: 10px;
+            padding: 1em 1.5em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+        .card img {
+            margin-top: 0.5em;
+            border-radius: 6px;
+        }
+        .card h4 {
+            margin-top: 0;
+        }
+        .news-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1em;
+            text-decoration: none;
+            color: inherit;
+            transition: box-shadow 0.2s, transform 0.2s;
+            cursor: pointer;
+        }
+        .news-card:hover {
+            box-shadow: 0 4px 16px rgba(34,139,34,0.15);
+            background: #e6f9ee;
+            transform: translateY(-2px) scale(1.01);
+        }
+        .news-card img {
+            flex-shrink: 0;
+            border-radius: 8px;
+            max-width: 120px;
+            height: auto;
+        }
+        .news-card h4 {
+            margin: 0 0 0.3em 0;
+        }
+        .news-card p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+            <div class="logo">
+                <h1>Emmergrün e.V.</h1>
+                <h2>Waldgarten Emmerich am Rhein</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li id="tab-ueberuns" class="tab active">Über uns</li>
+                    <li id="tab-waldgarten" class="tab">Der Waldgarten</li>
+                    <li id="tab-aktuelles" class="tab">Aktuelles</li>
+                    <li id="tab-kontakt" class="tab">Kontakt</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="ueberuns" class="active">
+            <h3>Über uns</h3>
+            <div class="card-list">
+                <div class="card">
+                    <h4>Ziel</h4>
+                    <p>
+                        Förderung nachhaltiger Ernährung und Biodiversität.<br>
+                        <img src="../images/Img1.jpg" alt="Symbolbild Ziel" style="width:100%;max-width:200px;">
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Philosophie</h4>
+                    <p>
+                        Permakultur, biologische Vielfalt, Gemeinschaft.<br>
+                        <img src="../images/Img2.jpg" alt="Symbolbild Philosophie" style="width:100%;max-width:200px;">
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Team</h4>
+                    <p>
+                        Engagierte Mitglieder aus Emmerich und Umgebung.<br>
+                        <img src="../images/Img3.jpg" alt="Symbolbild Team" style="width:100%;max-width:200px;">
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="waldgarten">
+            <h3>Der Waldgarten</h3>
+            <p>
+                Unser Waldgarten basiert auf den Prinzipien der Permakultur und nachhaltigem, biologischem Wald. <br>
+                <strong>Pflanzen:</strong> Obstbäume, Beerensträucher, essbare Wildpflanzen.<br>
+                <strong>Nachhaltigkeit:</strong> Kein Einsatz von Chemie, Förderung von Bodenleben und Artenvielfalt.
+            </p>
+            <p>
+                <em>Bilder und weitere Infos folgen bald!</em>
+            </p>
+        </section>
+        <section id="aktuelles">
+            <h3>Aktuelles</h3>
+            <div class="card-list">
+                <a href="news/sommerfest-2025.html" class="card news-card">
+                    <img src="../images/Img4.jpg" alt="Sommerfest 2025" style="width:100%;max-width:220px;">
+                    <div>
+                        <h4>Sommerfest im Waldgarten</h4>
+                        <p>blaaa blaa</p>
+                    </div>
+                </a>
+                <a href="news/pflanzaktion-herbst.html" class="card news-card">
+                    <img src="../images/Img5.jpg" alt="Pflanzaktion Herbst" style="width:100%;max-width:220px;">
+                    <div>
+                        <h4>Pflanzaktion im Herbst</h4>
+                        <p>Im Herbst planen wir eine neue Pflanzaktion. Mach mit und unterstütze die Artenvielfalt!</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="kontakt">
+            <h3>Kontakt</h3>
+            <ul>
+                <li>Email: <a href="mailto:iemmergruen@emmergruen.de">emmergruen@emmergruen.de</a></li>
+                <li>Ort: Emmerich am Rhein</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Waldgarten Emmergrün e.V.</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));
+                this.classList.add('active');
+                const id = this.id.replace('tab-', '');
+                document.getElementById(id).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
