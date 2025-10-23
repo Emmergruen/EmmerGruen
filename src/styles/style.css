@@ -1,4 +1,3 @@
-/* Neue Farbpalette */
 :root {
     --primary-green: #3a5a40;
     --secondary-green: #588157;
@@ -32,10 +31,12 @@ body {
 }
 
 header {
-    background: var(--header-gradient);
-    color: #ffffff;
-    padding: 0;
-    box-shadow: 0 2px 8px rgba(58,90,64,0.08);
+    position: fixed;
+  top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(0,0,0,0.2);
 }
 
 .header-bar {
@@ -58,7 +59,7 @@ header {
 
 .logo h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 3em;
     letter-spacing: 2px;
     font-family: 'Segoe UI', Arial, sans-serif;
     color: #fff;
@@ -73,7 +74,7 @@ header {
 
 .site-logo
 {
-    width: 64px;
+    width: 50px;
     height: auto;
     display: block;
     flex-shrink: 0;
@@ -82,7 +83,7 @@ header {
 .logo-text h1
 {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.6rem;
 }
 .logo-text h2
 {
@@ -167,7 +168,7 @@ section
     background: var(--card-bg);
     border-radius: 0px;
     box-shadow: 0 2px 12px rgba(58,90,64,0.07);
-    padding: 32px 24px;
+    padding: 100px;
     margin-bottom: 32px;
     animation: fadeIn 0.5s;
     width: 100%;
@@ -290,7 +291,7 @@ footer {
     padding: 0px;
 }
 
-.hero-overlay
+.startBild
 {
     position: relative;
     display: flex;
@@ -301,13 +302,14 @@ footer {
     min-height: 50vh;
     background-image:
         linear-gradient(90deg,
-            rgba(0,0,0,0.6) 0%,
-            rgba(0,0,0,0.35) 35%,
-            rgba(0,0,0,0.12) 70%,
+            rgba(0,0,0,0.3) 0%,
+            rgba(0,0,0,0.15) 35%,
+            rgba(0,0,0,0.07) 70%,
             rgba(0,0,0,0.02) 100%),
         url('../../images/image17.jpg');
     background-size: cover;
-    background-position: center;
+    background-position-x: center;
+    background-position-y: 40%;
     background-repeat: no-repeat;
 
     color: #fff;
@@ -323,7 +325,8 @@ footer {
     padding-bottom: 5%;
 }
 
-.hero-overlay p {
+.startBild p
+{
     margin: 0;
 }
 
@@ -368,19 +371,6 @@ footer {
     #welcome.hero {
         min-height: 40vh;
     }
-
-    /* .hero-overlay
-    {
-        top: 55%;
-        width: calc(100% - 32px);
-        padding: 12px 16px;
-        font-size: 1.05rem;
-    }
-    
-    .hero-overlay p 
-    {
-        font-size: 1rem; 
-    } */
 
     main
     {
@@ -427,11 +417,6 @@ footer {
         font-size: 1em;
         padding: 10px 0;
         border-radius: 16px;
-    }
-
-    section {
-        padding: 18px 8px;
-        margin-bottom: 18px;
     }
 
     .dummy-bilder {

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmergrün e.V. – Waldgarten Emmerich</title>
+    <title>Waldgarten Emmergrün e.V.</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="../images/LogoEmmergrün.png" type="image/png">
 </head>
 <body>
     <header>
@@ -12,15 +13,13 @@
             <div class="logo">
                 <img src="../images/LogoEmmergrün.png" alt="Emmergrün Logo" class="site-logo">
                 <div class="logo-text">
-                    <h1>Emmergrün e.V.</h1>
-                    <h2>Waldgarten Emmerich am Rhein</h2>
+                    <h1>Waldgarten Emmergrün E.V.</h1>
                 </div>
             </div>
              <nav>
                  <ul>
                     <li id="tab-startseite" class="tab">Startseite</li>
                     <li id="tab-permakultur" class="tab">Permakultur</li>
-                    <li id="tab-verein" class="tab">Verein</li>
                     <li id="tab-ueberuns" class="tab">Über uns</li>
                     <li id="tab-aktuelles" class="tab">Aktuelles</li>
                     <li id="tab-kontakt" class="tab">Kontakt</li>
@@ -30,7 +29,7 @@
      </header>
     <main>
         <section id="startseite" class="active">
-            <div class="hero-overlay" aria-hidden="false">
+            <div class="startBild" aria-hidden="false">
                 <p>Essen anbauen</p>
                 <p>Zusammen</p>
                 <p>Im Einklang mit der Natur</p>
@@ -47,14 +46,74 @@
             <p>Wir sind ein Verein von Menschen aus Emmerich und Umgebung, die gerne gärtnern und dabei etwas für Umwelt und Naturschutz tun möchten. </p>
             <p>Wir freuen uns immer über neue Mitglieder und Gleichgesinnte! Schreib uns einfach eine E-Mail – wir zeigen dir gerne unseren Garten!</p>
             <p>E-Mail: Emmergrün@gmail.com</p>
+            <p>
+               Um zu sorgen dass der Garten auch wirklich eine grüne Oase bleibt haben wir eine Mitgliederverordnung woran die Mitglieder des Vereins sich halten müssen
+            </p>
+            <div id="mitgliederordnung">
+            <h2>Mitgliederordnung (Statut)</h2>
+            <ol>
+                <li>
+                    Es wird nach Permakultur Prinzipien gearbeitet.
+                </li>
+            
+                <li>
+                    Jeder hilft so viel er kann und möchte – es gibt keine festen Verpflichtungen, 
+                    aber klare Erwartungen. Gemeinsam sorgen wir dafür, dass der Garten gepflegt bleibt 
+                    und alle von der Ernte profitieren können.
+                    Jedes Mitglied übernimmt eine kleine Verantwortung oder Aufgabe 
+                    (z. B. Pflege eines bestimmten Bereichs). Möglich ist auch, dass verschiedene Mitglieder 
+                    zusammen eine Arbeitsgruppe für eine bestimmte Aufgabe bilden.
+                </li>
+            
+                <li>
+                    Weil Permakultur auf natürliche Kreisläufe setzt, darf der Boden nicht umgegraben werden. 
+                    Pestizide, Herbizide, Fungizide, künstliche Dünger oder andere chemische Stoffe sind verboten. 
+                    Es werden nur samenfeste Sorten verwendet, biologisch gezüchtete Pflanzen werden bevorzugt.
+                    Sogenanntes „Unkraut“ (also Wildkräuter) hat eine eigene Funktion im Garten 
+                    (Bodenverbesserung, Nahrung für Tiere und Insekten) und darf nur entfernt werden, 
+                    wo es den Obst- und Gemüseanbau stört.
+                    Es wird so wenig wie möglich Erde von außerhalb eingebracht. 
+                    Falls es notwendig ist, Erde oder Kompost von extern zu verwenden, 
+                    muss diese torffrei sein. Bevor neue Erde eingebracht wird, sollen möglichst 
+                    Materialien wie Kompost, Mulch oder Laub aus dem Garten genutzt werden.
+                </li>
+            
+                <li>
+                    Abfall, der nicht aus dem Garten stammt, wird mit nach Hause genommen.
+                    Organische Abfälle können im Garten kompostiert werden, 
+                    wenn sie von biologischem Gemüse stammen und nicht gekocht wurden.
+                </li>
+            
+                <li>
+                    Besucher sind willkommen und dürfen gerne mitarbeiten, 
+                    wenn ein Mitglied des Vereins anwesend ist und sie sich an diese Mitgliederordnung halten.
+                    Eigeninitiativen dürfen nur nach Absprache und unter Anleitung von Vereinsmitgliedern 
+                    durchgeführt werden. Die Mitarbeit geschieht auf eigene Gefahr.
+                </li>
+            
+                <li>
+                    Wir respektieren einander und tragen alle dazu bei, 
+                    gemeinsam in Harmonie zu arbeiten.
+                    Das heißt, dass wir einander zuhören, wenn Meinungsverschiedenheiten auftreten, 
+                    und versuchen, diese gemeinsam zu lösen.
+                    Diskriminierung oder respektloses Verhalten sind verboten.
+                </li>
+            
+                <li>
+                    Verteilung der Ernte:
+                    Grundregel für die Verteilung der Ernte: 
+                    „Wer mithilft, darf auch ernten – aber in einem fairen Maß.“
+                    Möglicherweise wird eine Ernteliste geführt. 
+                    Gelegentlich werden gemeinsame Erntetage für große Mengen organisiert 
+                    (z. B. Apfelernte).
+                </li>
+            </ol>
+        </div>
+          
         </section>
         <section id="permakultur">
-            <h3>Permakultur</h3>
             <div>
-                Unser Waldgarten basiert auf den Prinzipien der Permakultur.<br>
-            
-                <section id="permakultur-prinzipien">
-                
+                <div id="permakultur-prinzipien">
                 <h2>Permakultur Prinzipien</h2>
                 <h3>Ethik als Grundlage (nach Mollison)</h3>
                 <ol>
@@ -80,75 +139,8 @@
                     <li><strong>Achte auf Feedback und Anpassung:</strong> Probleme gemeinsam lösen und den Garten stetig verbessern.</li>
                     <li><strong>Gestalte für die Zukunft:</strong> Denke an nachfolgende Generationen: Pflanze Bäume, die lange tragen, und baue ein stabiles Ökosystem auf.</li>
                 </ol>
-            </section>
+            </div>
         </div>
-        </section>
-        <section id="verein">
-            <h3>Verein</h3>
-            <p>
-               Um zu sorgen dass der Garten auch wirklich eine grüne Oase bleibt haben wir eine Mitgliederverordnung woran die Mitglieder des Vereins sich halten müssen
-            
-                <section id="mitgliederordnung">
-                <h2>Mitgliederordnung (Statut)</h2>
-                <ol>
-                    <li>
-                        Es wird nach Permakultur Prinzipien gearbeitet.
-                    </li>
-                
-                    <li>
-                        Jeder hilft so viel er kann und möchte – es gibt keine festen Verpflichtungen, 
-                        aber klare Erwartungen. Gemeinsam sorgen wir dafür, dass der Garten gepflegt bleibt 
-                        und alle von der Ernte profitieren können.
-                        Jedes Mitglied übernimmt eine kleine Verantwortung oder Aufgabe 
-                        (z. B. Pflege eines bestimmten Bereichs). Möglich ist auch, dass verschiedene Mitglieder 
-                        zusammen eine Arbeitsgruppe für eine bestimmte Aufgabe bilden.
-                    </li>
-                
-                    <li>
-                        Weil Permakultur auf natürliche Kreisläufe setzt, darf der Boden nicht umgegraben werden. 
-                        Pestizide, Herbizide, Fungizide, künstliche Dünger oder andere chemische Stoffe sind verboten. 
-                        Es werden nur samenfeste Sorten verwendet, biologisch gezüchtete Pflanzen werden bevorzugt.
-                        Sogenanntes „Unkraut“ (also Wildkräuter) hat eine eigene Funktion im Garten 
-                        (Bodenverbesserung, Nahrung für Tiere und Insekten) und darf nur entfernt werden, 
-                        wo es den Obst- und Gemüseanbau stört.
-                        Es wird so wenig wie möglich Erde von außerhalb eingebracht. 
-                        Falls es notwendig ist, Erde oder Kompost von extern zu verwenden, 
-                        muss diese torffrei sein. Bevor neue Erde eingebracht wird, sollen möglichst 
-                        Materialien wie Kompost, Mulch oder Laub aus dem Garten genutzt werden.
-                    </li>
-                
-                    <li>
-                        Abfall, der nicht aus dem Garten stammt, wird mit nach Hause genommen.
-                        Organische Abfälle können im Garten kompostiert werden, 
-                        wenn sie von biologischem Gemüse stammen und nicht gekocht wurden.
-                    </li>
-                
-                    <li>
-                        Besucher sind willkommen und dürfen gerne mitarbeiten, 
-                        wenn ein Mitglied des Vereins anwesend ist und sie sich an diese Mitgliederordnung halten.
-                        Eigeninitiativen dürfen nur nach Absprache und unter Anleitung von Vereinsmitgliedern 
-                        durchgeführt werden. Die Mitarbeit geschieht auf eigene Gefahr.
-                    </li>
-                
-                    <li>
-                        Wir respektieren einander und tragen alle dazu bei, 
-                        gemeinsam in Harmonie zu arbeiten.
-                        Das heißt, dass wir einander zuhören, wenn Meinungsverschiedenheiten auftreten, 
-                        und versuchen, diese gemeinsam zu lösen.
-                        Diskriminierung oder respektloses Verhalten sind verboten.
-                    </li>
-                
-                    <li>
-                        Verteilung der Ernte:
-                        Grundregel für die Verteilung der Ernte: 
-                        „Wer mithilft, darf auch ernten – aber in einem fairen Maß.“
-                        Möglicherweise wird eine Ernteliste geführt. 
-                        Gelegentlich werden gemeinsame Erntetage für große Mengen organisiert 
-                        (z. B. Apfelernte).
-                    </li>
-                </ol>
-                </section>
-            </p>
         </section>
         <section id="aktuelles">
             <h3>Aktuelles</h3>
