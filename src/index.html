@@ -5,231 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emmergrün e.V. – Waldgarten Emmerich</title>
     <link rel="stylesheet" href="styles/style.css">
-    <style>
-        nav {
-            background: #e0f2e9;
-            padding: 0.5em 0;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2em;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-        nav li {
-            cursor: pointer;
-        }
-        section {
-            display: none;
-        }
-        section.active {
-            display: block;
-        }
-        .card-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5em;
-            margin-top: 1em;
-        }
-        .card {
-            background: #f5fdf8;
-            border: 1px solid #b2d8c5;
-            border-radius: 10px;
-            padding: 1em 1.5em;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        }
-        .card img {
-            margin-top: 0.5em;
-            border-radius: 6px;
-        }
-        .card h4 {
-            margin-top: 0;
-        }
-        .news-card {
-            display: flex;
-            align-items: flex-start;
-            gap: 1em;
-            text-decoration: none;
-            color: inherit;
-            transition: box-shadow 0.2s, transform 0.2s;
-            cursor: pointer;
-        }
-        .news-card:hover {
-            box-shadow: 0 4px 16px rgba(34,139,34,0.15);
-            background: #e6f9ee;
-            transform: translateY(-2px) scale(1.01);
-        }
-        .news-card img {
-            flex-shrink: 0;
-            border-radius: 8px;
-            max-width: 120px;
-            height: auto;
-        }
-        .news-card h4 {
-            margin: 0 0 0.3em 0;
-        }
-        .news-card p {
-            margin: 0;
-        }
-        /* full-bleed hero: HALLO moved upward, paragraph moved below image */
-        #welcome {
-            /* dunkler links -> heller nach rechts: Gradient über dem Bild */
-            background-image:
-                linear-gradient(90deg,
-                    rgba(0,0,0,0.6) 0%,
-                    rgba(0,0,0,0.35) 35%,
-                    rgba(0,0,0,0.12) 70%,
-                    rgba(0,0,0,0.02) 100%),
-                url('../images/image17.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 70vh;
-            display: flex;
-            align-items: flex-start; /* place HALLO near top of the hero */
-            justify-content: center;
-            color: white;
-            text-align: center;
-            padding: 1.5rem 0 0.5rem;
-            box-sizing: border-box;
-            position: relative;
-            /*box-shadow: 0 0 8px 8px white inset;*/
-        }
-
-        /* halb-transparente Box auf dem Hero-Bild (zentriert auf dem Bild) */
-        .hero-overlay {
-            position: relative;
-            top: 53%;
-            left: 1%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            background: rgba(0, 0, 0, 0.0);
-            color: #ffffff;
-            max-width: 900px;
-            padding: 18px 26px;
-            border-radius: 12px;
-            font-weight: 800;
-            text-align: left;
-            margin-top: 20px;
-            box-sizing: border-box;
-            font-size: 4rem;
-            line-height: 1.05;
-        }
-
-        .hero-overlay p {
-            margin: 0;
-            color: #fff;                   /* sicher weißer Text */
-            font-weight: 800;
-            font-size: 1.1em;
-        }
-
-        @media (max-width: 700px) {
-            .hero-overlay {
-                top: 55%;
-                width: calc(100% - 32px);
-                padding: 12px 16px;
-                font-size: 1.05rem;
-            }
-            .hero-overlay p { font-size: 1rem; }
-        }
-        #welcome h2 {
-            font-size: 2.5em;
-            margin: 0 0 0.25em 0;
-        }
-        /* text that used to be inside the hero is now below the image */
-        .hero-caption {
-            max-width: 1100px;
-            margin: 0.75rem auto 1.25rem;
-            padding: 0 24px;
-            color: var(--primary-green);
-            text-align: center;
-            font-size: 1.1rem;
-        }
-        .hero-quote {
-            font-style: italic;
-            color: #fff;
-            text-align: center;
-            margin-top: 1em;
-            font-size: 1.2em;
-        }
-    </style>
 </head>
 <body>
     <header>
         <div class="header-bar">
             <div class="logo">
-                 <h1>Emmergrün e.V.</h1>
-                 <h2>Waldgarten Emmerich am Rhein</h2>
-             </div>
+                <img src="../images/LogoEmmergrün.png" alt="Emmergrün Logo" class="site-logo">
+                <div class="logo-text">
+                    <h1>Emmergrün e.V.</h1>
+                    <h2>Waldgarten Emmerich am Rhein</h2>
+                </div>
+            </div>
              <nav>
                  <ul>
-                    <li id="tab-welcome" class="tab">Startseite</li>
-                     <li id="tab-ueberuns" class="tab active">Über uns</li>
-                     <li id="tab-waldgarten" class="tab">Der Waldgarten</li>
-                     <li id="tab-aktuelles" class="tab">Aktuelles</li>
-                     <li id="tab-kontakt" class="tab">Kontakt</li>
+                    <li id="tab-startseite" class="tab">Startseite</li>
+                    <li id="tab-permakultur" class="tab">Permakultur</li>
+                    <li id="tab-verein" class="tab">Verein</li>
+                    <li id="tab-ueberuns" class="tab">Über uns</li>
+                    <li id="tab-aktuelles" class="tab">Aktuelles</li>
+                    <li id="tab-kontakt" class="tab">Kontakt</li>
                  </ul>
              </nav>
          </div>
      </header>
-    <!-- Full-bleed Hero / Startseite -->
-    <section id="welcome" class="hero">
-         <div class="hero-overlay" aria-hidden="false">
-            <p>Essen anbauen</p>
-            <p>Zusammen</p>
-            <p>im Einklang mit der Natur</p>
-        </div>
-      </section>
-    <div class="hero-caption">
-        <p>Wir sind ein gemeinnütziger Verein aus Emmerich am Rhein, der sich der Förderung nachhaltiger Ernährung und Biodiversität durch den Aufbau und Erhalt eines Waldgartens widmet.</p>
-    </div>
-    <div class="hero-quote" role="note" aria-label="Zitat">
-         <p>Zusammen machen wir die welt grüner</p>
-     </div>
     <main>
-         <section id="ueberuns" class="active">
-            <h3>Über uns</h3>
-            <div class="card-list">
-                <div class="card">
-                    <h4>Ziel</h4>
-                    <p>
-                        Förderung nachhaltiger Ernährung und Biodiversität.<br>
-                        <img src="../images/Img1.jpg" alt="Symbolbild Ziel" style="width:100%;max-width:200px;">
-                    </p>
-                </div>
-                <div class="card">
-                    <h4>Philosophie</h4>
-                    <p>
-                        Permakultur, biologische Vielfalt, Gemeinschaft.<br>
-                        <img src="../images/Img2.jpg" alt="Symbolbild Philosophie" style="width:100%;max-width:200px;">
-                    </p>
-                </div>
-                <div class="card">
-                    <h4>Team</h4>
-                    <p>
-                        Engagierte Mitglieder aus Emmerich und Umgebung.<br>
-                        <img src="../images/Img3.jpg" alt="Symbolbild Team" style="width:100%;max-width:200px;">
-                    </p>
-                </div>
+        <section id="startseite" class="active">
+            <div class="hero-overlay" aria-hidden="false">
+                <p>Essen anbauen</p>
+                <p>Zusammen</p>
+                <p>Im Einklang mit der Natur</p>
+            </div>
+            <div class="hero-caption">
+                <p>In unserem Waldgarten bauen wir Obst und Gemüse nach den Prinzipien der Permakultur an.</p>
+            </div>
+            <div class="hero-quote" role="note" aria-label="Zitat">
+                <p>Zusammen machen wir die welt grüner</p>
             </div>
         </section>
-        <section id="waldgarten">
-            <h3>Der Waldgarten</h3>
+        <section id="ueberuns">
+            <h3>Über uns</h3>
+            <p>Wir sind ein Verein von Menschen aus Emmerich und Umgebung, die gerne gärtnern und dabei etwas für Umwelt und Naturschutz tun möchten. </p>
+            <p>Wir freuen uns immer über neue Mitglieder und Gleichgesinnte! Schreib uns einfach eine E-Mail – wir zeigen dir gerne unseren Garten!</p>
+            <p>E-Mail: Emmergrün@gmail.com</p>
+        </section>
+        <section id="permakultur">
+            <h3>Permakultur</h3>
+            <div>
+                Unser Waldgarten basiert auf den Prinzipien der Permakultur.<br>
+            
+                <section id="permakultur-prinzipien">
+                
+                <h2>Permakultur Prinzipien</h2>
+                <h3>Ethik als Grundlage (nach Mollison)</h3>
+                <ol>
+                    <li><strong>Sorge für die Erde:</strong> Erhalte und verbessere Boden, Wasser und Biodiversität.</li>
+                    <li><strong>Sorge für die Menschen:</strong> Fördere Zusammenarbeit, gemeinsames Lernen und Teilhabe.</li>
+                    <li><strong>Teile Überschüsse gerecht:</strong> Ernte nachhaltig und verteile Erträge fair.</li>
+                </ol>
+                <h3>Praktische Gestaltungsprinzipien (nach Mollison &amp; Holmgren)</h3>
+                <ol start="4">
+                    <li><strong>Arbeite mit der Natur, nicht gegen sie:</strong> Setze auf Mischkulturen, Wildkräuter und natürliche Prozesse statt Monokultur und Chemie.</li>
+                    <li><strong>Nutze regenerative Ressourcen:</strong> Kompost, Regenwassernutzung, Mulchen und natürliche Schädlingsbekämpfung.</li>
+                    <li><strong>Erhalte und baue fruchtbaren Boden auf:</strong> Durch Kompost, Mulch und Mykorrhiza-Förderung.</li>
+                    <li><strong>Schaffe eine langfristig stabile Struktur:</strong> Pflanze mehrjährige Pflanzen und gestalte den Waldgarten in Schichten (Baum-, Strauch-, Kräuter-, Wurzel- und Bodenschicht).</li>
+                    <li><strong>Maximiere Synergien:</strong> Tiere, Pflanzen, Pilze und Menschen arbeiten zusammen, z. B. durch Gildenpflanzungen, Unterschlüpfmöglichkeiten für Tiere, Blumenwiese oder essbare Hecken.</li>
+                    <li><strong>Nutze kleine, langsame Lösungen:</strong> Beginne mit Pilotflächen und skaliere nachhaltig, statt zu groß zu starten.</li>
+                    <li><strong>Nutze Vielfalt für Stabilität:</strong> Kombiniere verschiedene Pflanzen, um Schädlinge zu minimieren und Erträge zu sichern.</li>
+                </ol>
+                <h3>Gemeinschaftsregeln für Zusammenarbeit</h3>
+                <ol start="11">
+                    <li><strong>Teile Verantwortung und Wissen:</strong> Regelmäßige Treffen, Workshops und transparente Kommunikation.</li>
+                    <li><strong>Jeder Beitrag zählt:</strong> Auch kleine Aufgaben wie Gießen, Ernten oder Reparaturen sind wichtig.</li>
+                    <li><strong>Gerechte Nutzung der Ernte:</strong> Klare Regeln, wer wann was ernten darf, um Konflikte zu vermeiden.</li>
+                    <li><strong>Achte auf Feedback und Anpassung:</strong> Probleme gemeinsam lösen und den Garten stetig verbessern.</li>
+                    <li><strong>Gestalte für die Zukunft:</strong> Denke an nachfolgende Generationen: Pflanze Bäume, die lange tragen, und baue ein stabiles Ökosystem auf.</li>
+                </ol>
+            </section>
+        </div>
+        </section>
+        <section id="verein">
+            <h3>Verein</h3>
             <p>
-                Unser Waldgarten basiert auf den Prinzipien der Permakultur und nachhaltigem, biologischem Wald. <br>
-                <strong>Pflanzen:</strong> Obstbäume, Beerensträucher, essbare Wildpflanzen.<br>
-                <strong>Nachhaltigkeit:</strong> Kein Einsatz von Chemie, Förderung von Bodenleben und Artenvielfalt.
-            </p>
-            <p>
-                <em>Bilder und weitere Infos folgen bald!</em>
+               Um zu sorgen dass der Garten auch wirklich eine grüne Oase bleibt haben wir eine Mitgliederverordnung woran die Mitglieder des Vereins sich halten müssen
+            
+                <section id="mitgliederordnung">
+                <h2>Mitgliederordnung (Statut)</h2>
+                <ol>
+                    <li>
+                        Es wird nach Permakultur Prinzipien gearbeitet.
+                    </li>
+                
+                    <li>
+                        Jeder hilft so viel er kann und möchte – es gibt keine festen Verpflichtungen, 
+                        aber klare Erwartungen. Gemeinsam sorgen wir dafür, dass der Garten gepflegt bleibt 
+                        und alle von der Ernte profitieren können.
+                        Jedes Mitglied übernimmt eine kleine Verantwortung oder Aufgabe 
+                        (z. B. Pflege eines bestimmten Bereichs). Möglich ist auch, dass verschiedene Mitglieder 
+                        zusammen eine Arbeitsgruppe für eine bestimmte Aufgabe bilden.
+                    </li>
+                
+                    <li>
+                        Weil Permakultur auf natürliche Kreisläufe setzt, darf der Boden nicht umgegraben werden. 
+                        Pestizide, Herbizide, Fungizide, künstliche Dünger oder andere chemische Stoffe sind verboten. 
+                        Es werden nur samenfeste Sorten verwendet, biologisch gezüchtete Pflanzen werden bevorzugt.
+                        Sogenanntes „Unkraut“ (also Wildkräuter) hat eine eigene Funktion im Garten 
+                        (Bodenverbesserung, Nahrung für Tiere und Insekten) und darf nur entfernt werden, 
+                        wo es den Obst- und Gemüseanbau stört.
+                        Es wird so wenig wie möglich Erde von außerhalb eingebracht. 
+                        Falls es notwendig ist, Erde oder Kompost von extern zu verwenden, 
+                        muss diese torffrei sein. Bevor neue Erde eingebracht wird, sollen möglichst 
+                        Materialien wie Kompost, Mulch oder Laub aus dem Garten genutzt werden.
+                    </li>
+                
+                    <li>
+                        Abfall, der nicht aus dem Garten stammt, wird mit nach Hause genommen.
+                        Organische Abfälle können im Garten kompostiert werden, 
+                        wenn sie von biologischem Gemüse stammen und nicht gekocht wurden.
+                    </li>
+                
+                    <li>
+                        Besucher sind willkommen und dürfen gerne mitarbeiten, 
+                        wenn ein Mitglied des Vereins anwesend ist und sie sich an diese Mitgliederordnung halten.
+                        Eigeninitiativen dürfen nur nach Absprache und unter Anleitung von Vereinsmitgliedern 
+                        durchgeführt werden. Die Mitarbeit geschieht auf eigene Gefahr.
+                    </li>
+                
+                    <li>
+                        Wir respektieren einander und tragen alle dazu bei, 
+                        gemeinsam in Harmonie zu arbeiten.
+                        Das heißt, dass wir einander zuhören, wenn Meinungsverschiedenheiten auftreten, 
+                        und versuchen, diese gemeinsam zu lösen.
+                        Diskriminierung oder respektloses Verhalten sind verboten.
+                    </li>
+                
+                    <li>
+                        Verteilung der Ernte:
+                        Grundregel für die Verteilung der Ernte: 
+                        „Wer mithilft, darf auch ernten – aber in einem fairen Maß.“
+                        Möglicherweise wird eine Ernteliste geführt. 
+                        Gelegentlich werden gemeinsame Erntetage für große Mengen organisiert 
+                        (z. B. Apfelernte).
+                    </li>
+                </ol>
+                </section>
             </p>
         </section>
         <section id="aktuelles">
             <h3>Aktuelles</h3>
             <div class="card-list">
-                <a href="news/sommerfest-2025.html" class="card news-card">
+                <!-- <a href="news/sommerfest-2025.html" class="card news-card">
                     <img src="../images/Img4.jpg" alt="Sommerfest 2025" style="width:100%;max-width:220px;">
                     <div>
                         <h4>Sommerfest im Waldgarten</h4>
@@ -242,28 +166,57 @@
                         <h4>Pflanzaktion im Herbst</h4>
                         <p>Im Herbst planen wir eine neue Pflanzaktion. Mach mit und unterstütze die Artenvielfalt!</p>
                     </div>
-                </a>
+                </a> -->
             </div>
         </section>
         <section id="kontakt">
             <h3>Kontakt</h3>
+            <p></p>Unser Vorstand:</p>
             <ul>
-                <li>Email: <a href="mailto:emmergruen@gmail.com">emmergruen@gmail.com</a></li>
-                <li>Ort: Emmerich am Rhein</li>
+                <li>1. Vorsitzende: Sabine Kroeze</li>
+                <li>2. Vorsitzender: Thomas Flemming</li>
+                <li>Kassenwart: Joas Paatsch</li>
+                <li>Schriftführerin: Hafize Özden</li>
             </ul>
+            <p>Email: <a href="mailto:emmergruen@gmail.com">emmergruen@gmail.com</a></p>
         </section>
     </main>
     <footer>
         <p>Waldgarten Emmergrün e.V.</p>
     </footer>
     <script>
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', function() {
+        document.querySelectorAll('.tab').forEach(tab =>
+        {
+            tab.addEventListener('click', function()
+            {
                 document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));
                 this.classList.add('active');
-                const id = this.id.replace('tab-', '');
-                document.getElementById(id).classList.add('active');
+                document.querySelectorAll('main > section').forEach(s => s.classList.remove('active'));
+
+                const targetId = this.id.replace('tab-', '');
+                const target = document.getElementById(targetId);
+                if (target)
+                {
+                    if (target.parentElement && target.parentElement.tagName.toLowerCase() === 'main')
+                    {
+                        target.classList.add('active');
+                    }
+                    else
+                    {
+                        let topAncestor = target;
+                        while (topAncestor && topAncestor.parentElement && topAncestor.parentElement !== document.querySelector('main'))
+                        {
+                            topAncestor = topAncestor.parentElement;
+                        }
+                        if (topAncestor && topAncestor.parentElement === document.querySelector('main'))
+                        {
+                            topAncestor.classList.add('active');
+                        } else
+                        {
+                            target.classList.add('active');
+                        }
+                    }
+                }
             });
         });
     </script>
